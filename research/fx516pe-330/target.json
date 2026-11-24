@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "windows-inventory-confirmed; preboot-capture-pending",
+  "system_product": "ASUS TUF Dash F15 FX516PE_TUF516PE",
+  "baseboard_product": "FX516PE",
+  "bios_version": "FX516PE.330",
+  "pci_device": "25a010de",
+  "pci_subsystem": "13dc1043",
+  "vbios_version": "94.07.42.00.3a",
+  "vram_mib": 4096,
+  "compute_capability": "8.6",
+  "observed_windows_driver": "621.24",
+  "chip_register": null,
+  "prom_sha256": null,
+  "cold_ss0": null,
+  "cold_ss1": null,
+  "firmware_ownership": null,
+  "display_route": null,
+  "can_unlock": false,
+  "hardware_unlock_tested": false
+}

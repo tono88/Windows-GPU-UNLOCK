@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "upstream_commit": "88961cc79ff0baf907c8f5b00d42ab0064496f01",
+  "scope": "Windows stock baseline and host-only EFI tests; no physical EFI boot or unlock",
+  "hardware_unlock_tested": false,
+  "efi_hardware_tested": false,
+  "host_validation": {
+    "inventory_checks": 41,
+    "entry_checks": 13,
+    "compile_refusals": 12,
+    "python_tests": 8
+  },
+  "efi": {
+    "machine": "x64",
+    "subsystem": "efi_application",
+    "imports": 0,
+    "relocation_bytes": 12,
+    "entry_rva": 4096,
+    "sha256": "267597b1ae883f55e31d468bd315e64a31ca03e864f21dbb894ad2c9d369fc84",
+    "bytes": 14848
+  },
+  "baseline": {
+    "collected_utc": "2026-11-24T21:40:47.960719+00:00",
+    "driver": "621.24",
+    "n": 2048,
+    "samples": 7,
+    "launches_per_sample": 5,
+    "seed": 3050330,
+    "input_domain": "random integers [-8,8] scaled by 0.125; exactly representable in FP16/BF16/TF32",
+    "runner_sha256": "7e0da0a6bb22d80d86fdc3d415647fe1cb1474874848b49fd06eb9331c1933d4",
+    "raw_local_record_sha256": "da95cc6f2b1839f62723a6c7f07bef31ec7fef417190239810770e31392aa150",
+    "results": [
+      {
+        "mode": "fp32_pedantic",
+        "n": 2048,
+        "samples_ms": [
+          3.585433578491211,
+          3.607756805419922,
+          3.607961654663086,
+          3.6186046600341797,
+          3.60447998046875,
+          3.605299377441406,
+          3.6050945281982423
+        ],
+        "median_ms": 3.605299377441406,
+        "median_tflops": 4.7651713173933805,
+        "sampled_output_count": 32,
+        "max_sampled_absolute_error": 0.0,
+        "all_outputs_finite": true,
+        "sampled_validation_passed": true
+      },
+      {
+        "mode": "fp16_fp32_accumulation",
+        "n": 2048,
+        "samples_ms": [
+          0.9846783638000488,
+          0.9901951789855957,
+          0.9893888473510742,
+          1.0094592094421386,
+          0.9865216255187989,
+          1.0172415733337403,
+          1.0338175773620606
+        ],
+        "median_ms": 0.9901951789855957,
+        "median_tflops": 17.3499826585703,
+        "sampled_output_count": 32,
+        "max_sampled_absolute_error": 0.0,
+        "all_outputs_finite": true,
+        "sampled_validation_passed": true
+      },
+      {
+        "mode": "bf16_fp32_accumulation",
+        "n": 2048,
+        "samples_ms": [
+          1.0729472160339355,
+          1.0876928329467774,
+          1.088102436065674,
+          1.1094016075134276,
+          1.1411328315734863,
+          1.1986944198608398,
+          1.1407360076904296
+        ],
+        "median_ms": 1.1094016075134276,
+        "median_tflops": 15.485707851556418,
+        "sampled_output_count": 32,
+        "max_sampled_absolute_error": 0.0,
+        "all_outputs_finite": true,
+        "sampled_validation_passed": true
+      },
+      {
+        "mode": "tf32_fp32_accumulation",
+        "n": 2048,
+        "samples_ms": [
+          1.75677433013916,
+          1.7670143127441407,
+          1.854604721069336,
+          1.8987007141113281,
+          1.8860031127929688,
+          1.8898944854736328,
+          1.8817024230957031
+        ],
+        "median_ms": 1.8817024230957031,
+        "median_tflops": 9.129960706399237,
+        "sampled_output_count": 32,
+        "max_sampled_absolute_error": 0.0,
+        "all_outputs_finite": true,
+        "sampled_validation_passed": true
+      }
+    ],
+    "limits": [
+      "one stock Windows session",
+      "32 sampled output checks per mode",
+      "no full random-matrix or model-quality validation",
+      "no controlled unlocked comparison",
+      "no LLM token-speed measurement",
+      "clock/temperature snapshots are not continuous profiling"
+    ]
+  }
+}
