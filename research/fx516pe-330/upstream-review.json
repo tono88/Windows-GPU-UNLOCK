@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "reviewed_date": "2026-11-24",
+  "local_target": {
+    "pci_device": "25a010de",
+    "pci_subsystem": "13dc1043",
+    "bios": "FX516PE.330",
+    "vbios": "94.07.42.00.3a",
+    "os_route": "Windows only",
+    "can_unlock": false
+  },
+  "zagitta": {
+    "commit": "7eb51bccae0a0b7e599e084d971170e9a1e82d0c",
+    "recipes_blob": "21e4aca7af17fb1e3118901f1bc4f9ad96b17db9",
+    "main_admits_ga107": false,
+    "main_admits_25a0": false,
+    "ga107_pr": {
+      "url": "https://github.com/Zagitta/gpu-unlock/pull/231",
+      "head": "f8bc9936e1842b6052c07c21becc7086b5747c7d",
+      "state": "open",
+      "merged": false
+    },
+    "closest_external_report": {
+      "url": "https://github.com/Zagitta/gpu-unlock/issues/246",
+      "host": "ASUS TUF Dash F15 FX516PE",
+      "pci_device": "10de:25a0",
+      "vbios": "94.07.2B.00.54",
+      "os": "Ubuntu 26.04.1",
+      "reported_gain_percent": {
+        "fp16": 68,
+        "bf16": 74
+      },
+      "reported_runtime_d3_dependency": true,
+      "validates_this_windows_machine": false
+    }
+  },
+  "turing": {
+    "commit": "a188b24a392414f29f931ea886329227cfbc2f98",
+    "target": "TU102 / RTX 2080 Ti",
+    "direct_payload_reuse_for_ga107": false,
+    "code_copied": false
+  },
+  "execution": {
+    "firmware_attempted": false,
+    "boot_configuration_changed": false,
+    "secure_boot_changed": false,
+    "internal_diagnostic_route_implemented": false,
+    "current_inventory_binary_media": "USB only",
+    "next_evidence": "local preboot PCI/ownership, bounded deep capture and Windows post-driver/idle persistence"
+  },
+  "wsl_architecture_source": "https://docs.nvidia.com/cuda/wsl-user-guide/"
+}
